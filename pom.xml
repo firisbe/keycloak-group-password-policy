@@ -75,154 +75,10 @@
     
     <profiles>
     	<profile>
-    		<id>keycloak-v6</id>
-    		<properties>
-        		<keycloak.majorVersion>6</keycloak.majorVersion>
-        		<keycloak.version.range>v6</keycloak.version.range>
-    		</properties>
-    		<build>
-    			<plugins>
-    				<plugin>
-    					<groupId>org.codehaus.mojo</groupId>
-    					<artifactId>build-helper-maven-plugin</artifactId>
-    					<executions>
-    						<execution>
-    							<id>add-source</id>
-    							<goals><goal>add-source</goal></goals>
-		    					<configuration>
-		    						<sources>
-		    							<source>${basedir}/src/keycloak-v6/java</source>
-		    							<source>${basedir}/src/keycloak-v6-v11/java</source>
-		    							<source>${basedir}/src/keycloak-v6-v7/java</source>
-		    						</sources>
-		    					</configuration>
-    						</execution>
-    					</executions>
-    				</plugin>
-    			</plugins>
-    		</build>
-    	</profile>
-    	<profile>
-    		<id>keycloak-v7</id>
-    		<properties>
-        		<keycloak.majorVersion>7</keycloak.majorVersion>
-        		<keycloak.version.range>v7</keycloak.version.range>
-    		</properties>
-    		<build>
-    			<plugins>
-    				<plugin>
-    					<groupId>org.codehaus.mojo</groupId>
-    					<artifactId>build-helper-maven-plugin</artifactId>
-    					<executions>
-    						<execution>
-    							<id>add-source</id>
-    							<goals><goal>add-source</goal></goals>
-		    					<configuration>
-		    						<sources>
-		    							<source>${basedir}/src/keycloak-v6-v11/java</source>
-		    							<source>${basedir}/src/keycloak-v6-v7/java</source>
-		    							<source>${basedir}/src/keycloak-v7+/java</source>
-		    						</sources>
-		    					</configuration>
-    						</execution>
-    					</executions>
-    				</plugin>
-    			</plugins>
-    		</build>
-    	</profile>
-    	<profile>
-    		<id>keycloak-v8-v11</id>
+    		<id>keycloak-v15-v24</id>
     		<activation>
     			<activeByDefault>true</activeByDefault>
     		</activation>
-    		<properties>
-        		<keycloak.majorVersion>8</keycloak.majorVersion>
-        		<keycloak.version.range>v8-v11</keycloak.version.range>
-    		</properties>
-    		<build>
-    			<plugins>
-    				<plugin>
-    					<groupId>org.codehaus.mojo</groupId>
-    					<artifactId>build-helper-maven-plugin</artifactId>
-    					<executions>
-    						<execution>
-    							<id>add-source</id>
-    							<goals><goal>add-source</goal></goals>
-		    					<configuration>
-		    						<sources>
-		    							<source>${basedir}/src/keycloak-v6-v11/java</source>
-		    							<source>${basedir}/src/keycloak-v8-v12/java</source>
-		    							<source>${basedir}/src/keycloak-v7+/java</source>
-		    							<source>${basedir}/src/keycloak-v8+/java</source>
-		    						</sources>
-		    					</configuration>
-    						</execution>
-    					</executions>
-    				</plugin>
-    			</plugins>
-    		</build>
-    	</profile>
-    	<profile>
-    		<id>keycloak-v12</id>
-    		<properties>
-        		<keycloak.majorVersion>12</keycloak.majorVersion>
-        		<keycloak.version.range>v12</keycloak.version.range>
-    		</properties>
-    		<build>
-    			<plugins>
-    				<plugin>
-    					<groupId>org.codehaus.mojo</groupId>
-    					<artifactId>build-helper-maven-plugin</artifactId>
-    					<executions>
-    						<execution>
-    							<id>add-source</id>
-    							<goals><goal>add-source</goal></goals>
-		    					<configuration>
-		    						<sources>
-		    							<source>${basedir}/src/keycloak-v8-v12/java</source>
-		    							<source>${basedir}/src/keycloak-v7+/java</source>
-		    							<source>${basedir}/src/keycloak-v8+/java</source>
-		    							<source>${basedir}/src/keycloak-v12+/java</source>
-		    						</sources>
-		    					</configuration>
-    						</execution>
-    					</executions>
-    				</plugin>
-    			</plugins>
-    		</build>
-    	</profile>
-    	<profile>
-    		<id>keycloak-v13-v14</id>
-    		<properties>
-        		<keycloak.majorVersion>13</keycloak.majorVersion>
-        		<keycloak.version.range>v13-v14</keycloak.version.range>
-    		</properties>
-    		<build>
-    			<plugins>
-    				<plugin>
-    					<groupId>org.codehaus.mojo</groupId>
-    					<artifactId>build-helper-maven-plugin</artifactId>
-    					<executions>
-    						<execution>
-    							<id>add-source</id>
-    							<goals><goal>add-source</goal></goals>
-		    					<configuration>
-		    						<sources>
-		    							<source>${basedir}/src/keycloak-v13-v14/java</source>
-		    							<source>${basedir}/src/keycloak-v7+/java</source>
-		    							<source>${basedir}/src/keycloak-v8+/java</source>
-		    							<source>${basedir}/src/keycloak-v12+/java</source>
-		    							<source>${basedir}/src/keycloak-v13+/java</source>
-		    						</sources>
-		    					</configuration>
-    						</execution>
-    					</executions>
-    				</plugin>
-    			</plugins>
-    		</build>
-    	</profile>
-    	<profile>
-    		<id>keycloak-v15-v24</id>
     		<properties>
         		<keycloak.majorVersion>15</keycloak.majorVersion>
         		<keycloak.version.range>v15-v24</keycloak.version.range>
@@ -236,16 +92,16 @@
     						<execution>
     							<id>add-source</id>
     							<goals><goal>add-source</goal></goals>
-		    					<configuration>
-		    						<sources>
-		    							<source>${basedir}/src/keycloak-v15-v24/java</source>
-		    							<source>${basedir}/src/keycloak-v7+/java</source>
-		    							<source>${basedir}/src/keycloak-v8+/java</source>
-		    							<source>${basedir}/src/keycloak-v12+/java</source>
-		    							<source>${basedir}/src/keycloak-v13+/java</source>
-		    							<source>${basedir}/src/keycloak-v15+/java</source>
-		    						</sources>
-		    					</configuration>
+    							<configuration>
+    								<sources>
+    									<source>${basedir}/src/keycloak-v15-v24/java</source>
+    									<source>${basedir}/src/keycloak-v7+/java</source>
+    									<source>${basedir}/src/keycloak-v8+/java</source>
+    									<source>${basedir}/src/keycloak-v12+/java</source>
+    									<source>${basedir}/src/keycloak-v13+/java</source>
+    									<source>${basedir}/src/keycloak-v15+/java</source>
+    								</sources>
+    							</configuration>
     						</execution>
     					</executions>
     				</plugin>
@@ -255,7 +111,7 @@
     	<profile>
     		<id>keycloak-v25-v26</id>
     		<activation>
-    			<activeByDefault>true</activeByDefault>
+    			<activeByDefault>false</activeByDefault>
     		</activation>
     		<properties>
         		<keycloak.majorVersion>25</keycloak.majorVersion>
